@@ -6,9 +6,9 @@ Rails.application.routes.draw do
   post "/teams", to: "teams#create"
   get "/teams/new", to: "teams#new", as: :new_team
   get "/teams/:id/edit", to: "teams#edit", as: :edit_team
-  get "/team/:id", to: "teams#show", as: :team
-  patch "/team/:id", to: "teams#update"
-  delete "/team/:id", to: "teams#destroy"
+  get "/teams/:id", to: "teams#show", as: :team
+  patch "/teams/:id", to: "teams#update"
+  delete "/teams/:id", to: "teams#destroy"
 
   get "/team/:id/", to: "teams#show", as: :team
 
