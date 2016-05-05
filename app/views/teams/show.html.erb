@@ -1,0 +1,15 @@
+<h2>Team Show</h2>
+
+<div>
+  <h2><%= @team.name %></h2>
+  <div>
+    <%= link_to "edit", edit_team_path(@team) %>
+  </div>
+
+  <div>
+    <%= link_to "delete", team_path(@team), method: :delete %>
+  </div>
+</div>
+
+
+

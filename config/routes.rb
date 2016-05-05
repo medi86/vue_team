@@ -1,4 +1,30 @@
 Rails.application.routes.draw do
+
+  root "teams#index"
+
+  get "/teams", to: "teams#index", as: :teams
+  post "/teams", to: "teams#create"
+  get "/teams/new", to: "teams#new", as: :new_team
+  get "/teams/:id/edit", to: "teams#edit", as: :edit_team
+  get "/team/:id", to: "teams#show", as: :team
+  patch "/team/:id", to: "teams#update"
+  delete "/team/:id", to: "teams#destroy"
+
+
+
+
+ #      Prefix Verb   URI Pattern                    Controller#Action
+ #     tools GET    /tools(.:format)               tools#index
+ #           POST   /tools(.:format)               tools#create
+ #  new_tool GET    /tools/new(.:format)           tools#new
+ # edit_tool GET    /tools/:id/edit(.:format)      tools#edit
+ #      tool GET    /tools/:id(.:format)           tools#show
+ #           PATCH  /tools/:id(.:format)           tools#update
+ #           PUT    /tools/:id(.:format)           tools#update
+ #           DELETE /tools/:id(.:format)           tools#destroy
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
