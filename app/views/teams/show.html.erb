@@ -11,5 +11,13 @@
   </div>
 </div>
 
+<h3>Players</h3>
+
+<% @team.players.each do |player| %>
+  <div>
+    <%= link_to player.name, player_path(player) %>
+  </div>
+<% end %>
+
 
 

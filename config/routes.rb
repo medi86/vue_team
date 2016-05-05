@@ -10,6 +10,9 @@ Rails.application.routes.draw do
   patch "/team/:id", to: "teams#update"
   delete "/team/:id", to: "teams#destroy"
 
+  get "/team/:id/", to: "teams#show", as: :team
+
+
 
 
 

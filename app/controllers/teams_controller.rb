@@ -1,5 +1,5 @@
 class TeamsController < ApplicationController
-  before_action :set_team, only: [:show, :edit, :update, :destroy]
+  before_action :set_team, only: [ :edit, :update, :destroy]
 
   def index
     @teams = Team.all
@@ -15,6 +15,7 @@ class TeamsController < ApplicationController
   end
 
   def show
+    @team = Team.includes(:players).find_by_id(params[:id])
   end
 
   def edit
