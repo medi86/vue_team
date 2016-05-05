@@ -6,6 +6,14 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-names = ["Cubs", "White Sox", "Bulls", "Blackhawks", "Bears"]
+team_names = ["Cubs", "White Sox", "Bulls", "Blackhawks", "Bears"]
+player_names = ["John", "Bill", "Sally", "Susan", "Kyel"]
 
-names.each { |name| Team.create!(name: name)}
+team_names.each do |team_name|
+  team = Team.create!(name: team_name)
+  player_names.each do |player_name|
+    team.players.create!(name: player_name)
+  end
+end
+
+
