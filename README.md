@@ -3,6 +3,8 @@ A Rails application with full CRUD functionally  for Team has been provided for 
 
 Your goal is to implement a VueJS front end, where appropriate, that interacts with your rails application via an API controller.
 
+If you finish VueJS for Team, try pulling down the 'players' branch and implement VueJS for a two model (has_many) application.
+
 ### Resources
 [Josh VueJS cheatsheet](https://github.com/CodePlatoon/curriculum/blob/master/phase3/vue_cheatsheet.txt)
 
