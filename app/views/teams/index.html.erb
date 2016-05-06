@@ -1,8 +1,10 @@
 <h2>Teams</h2>
 
-<div>
+<div id="teams">
   <vue-team-list></vue-team-list>
 </div>
+
+<%= render partial: "vue_templates/team_list" %>
 
 <div>
   <%= link_to "Add team", new_team_path %>

@@ -1,0 +1,10 @@
+<script type="text/template" id="team-list-template">
+ <form v-on:submit.prevent="renderTeams">
+    <input type="text" v-model="teamName">
+    <input type="submit" value="Add"></input>
+  </form>
+
+  <ul>
+    <li v-for="name in teamNames">{{name}}</li>
+  </ul>
+</script>
