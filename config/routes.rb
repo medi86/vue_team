@@ -10,10 +10,13 @@ Rails.application.routes.draw do
   patch "/teams/:id", to: "teams#update"
   delete "/teams/:id", to: "teams#destroy"
 
-  get "/team/:id/", to: "teams#show", as: :team
-
-
-
+  get "/teams/:team_id/players", to: "players#index", as: :team_players
+  post "/teams/:team_id/players", to: "players#create"
+  get "/teams/:team_id/players/new", to: "players#new", as: :new_team_player
+  get "/teams/:team_id/players/:player_id/edit", to: "players#edit", as: :edit_team_player
+  get "/teams/:team_id/players/:player_id", to: "players#show", as: :team_player
+  patch "/teams/:team_id/players/:player_id", to: "players#update"
+  delete "/teams/:team_id/players/:player_id", to: "players#destroy"
 
 
  #      Prefix Verb   URI Pattern                    Controller#Action

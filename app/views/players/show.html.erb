@@ -1,0 +1,7 @@
+<h2>Player Show</h2>
+
+<h5>Player Name: <%= @player.name %></h5>
+<h5>Team Name: <%= @team.name %></h5>
+
+<%= link_to "Edit", edit_team_player_path(@team, @player) %>
+<%= link_to "Delete", team_player_path(@team, @player), method: :delete %>
